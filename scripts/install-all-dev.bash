@@ -3,4 +3,8 @@
 cd "$(dirname "$0")" || exit
 
 echo "🔧  DEV Install ALL MFE - eCommerceApp"
-bash frontend/container/install-dev.bash & bash frontend/cart/install-dev.bash & bash frontend/products/install-dev.bash
+npm --prefix .. install &
+npm install -g commitizen &
+bash frontend/container/install-dev.bash &
+bash frontend/cart/install-dev.bash &
+bash frontend/products/install-dev.bash
